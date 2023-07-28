@@ -1,6 +1,6 @@
 <template>
-    <div class="slider mt-3 ">
-      <div class="slide-track -gap-10">
+    <div class="slider mt-3 absolute">
+      <div class="slide-track -gap-20">
               <img class="slide h-16 w-auto" src="/src/assets/html5.png">
               <img class="slide h-16 w-auto" src="/src/assets/css.png">
               <img class="slide h-16 w-auto" src="/src/assets/javascript.png">
@@ -9,14 +9,13 @@
               <img class="slide h-16 w-auto" src="/src/assets/node-js.png">
               <img class="slide h-16 w-auto" src="/src/assets/graphql.png">
               <img class="slide h-16 w-auto" src="/src/assets/vuejs.png">
-              <img class="slide h-28 w-auto" src="/src/assets/git.png">
               <img class="slide h-16 w-auto" src="/src/assets/github.png">
       </div>
     </div>
 </template>
 <style scoped>
 .slider {
- height: 7rem;
+ height: 5rem;
   width: 100%;
   display: grid;
   place-items: center;
@@ -47,7 +46,11 @@
   display: flex;
   animation: scroll 20s linear infinite;
   justify-content: space-between;
+
+
+
 }
+
 
 .slide-track2 {
   width: calc(150px * 15);
@@ -57,10 +60,14 @@
 }
 
 .slide {
+  width: 3.4rem;
+  aspect-ratio: 3/2;
+  object-fit: contain;
   display: grid;
   place-items: center;
   transition:0.5s;
   cursor:pointer;
+  mix-blend-mode:  color-burn;
 }
 .slide:hover{
   transform:scale(0.8)
